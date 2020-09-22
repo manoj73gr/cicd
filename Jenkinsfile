@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building docker image..'
+                echo 'Building and test parameter..'
             }
         }
         stage('Test') {
