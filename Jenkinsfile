@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              sh 'sudo docker build . -t test:latest'
+              sh 'docker build . -t test:latest'
               sh 'ls'
             }
         }
