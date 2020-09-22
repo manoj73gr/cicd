@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
               sh 'docker build . -t test:latest'
+              sh 'ls'
             }
         }
         stage('Test') {
