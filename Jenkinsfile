@@ -30,5 +30,11 @@ pipeline {
               sh 'kubectl get nodes'
             }
         }
+       stage('Deploy to kubernetes ') {
+            steps {
+              sh 'ls'
+              sh 'pwd'
+            }
+        }
     }
 }
