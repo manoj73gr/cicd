@@ -14,7 +14,7 @@ pipeline {
                 sh 'docker images'
             }
         }
-        stage('Login to ECR repo') {
+        stage('Login to AWS ECR repo') {
             steps {
                 
                sh '$(aws ecr get-login --no-include-email --region us-east-1)'
