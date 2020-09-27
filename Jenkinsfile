@@ -34,6 +34,8 @@ pipeline {
             steps {
               sh 'ls'
               sh 'pwd'
+              sh 'cd helmchart'
+              sh 'helm install mongodb ./expresscart --namespace mongodb'
             }
         }
     }
