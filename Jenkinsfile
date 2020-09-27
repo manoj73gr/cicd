@@ -25,5 +25,10 @@ pipeline {
               sh 'docker push 469744164476.dkr.ecr.us-east-1.amazonaws.com/test:$BUILD_NUMBER'
             }
         }
+       stage('Kubernetes integration with jenkins ') {
+            steps {
+              sh 'kubectl cluster-info'
+            }
+        }
     }
 }
