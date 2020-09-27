@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: development\.secrets\.yaml$
+    kms: 'arn:aws:kms:us-east-1:469744164476:key/367c03d6-c9c3-42c1-8e1f-ce35b56e89a2'
