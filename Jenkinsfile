@@ -11,7 +11,7 @@ pipeline {
         stage('Login to ECR repo') {
             steps {
                 
-                sh 'docker images'
+                sh 'sudo docker images'
             }
         }
         stage('Push docker image to ecr') {
