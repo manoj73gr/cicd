@@ -2,20 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build docker image') {
             steps {
-              sh 'docker build . -t test:latest'
+              sh 'docker build . -t 469744164476.dkr.ecr.us-east-1.amazonaws.com/test:$BUILD_NUMBER'
               sh 'ls'
             }
         }
-        stage('Test') {
+        stage('Login to ECR repo') {
             steps {
-                echo 'Testing..'
+                sh '$(aws ecr get-login --no-include-email --region us-east-1)'
             }
         }
-        stage('Deploy') {
+        stage('Push docker image to ecr') {
             steps {
-                echo 'Deploying....'
+              sh 'docker push 469744164476.dkr.ecr.us-east-1.amazonaws.com/test:$BUILD_NUMBER'
             }
         }
     }
