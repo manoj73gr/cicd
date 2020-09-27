@@ -27,7 +27,7 @@ pipeline {
         }
        stage('Kubernetes integration with jenkins ') {
             steps {
-              sh 'kubectl cluster-info'
+              sh 'kubectl get nodes'
             }
         }
     }
