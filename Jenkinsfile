@@ -8,10 +8,16 @@ pipeline {
               sh 'ls'
             }
         }
-        stage('Login to ECR repo') {
+        stage('List docker images') {
             steps {
                 
                 sh 'docker images'
+            }
+        }
+        stage('Login to ECR repo') {
+            steps {
+                
+                sh ''
             }
         }
         stage('Push docker image to ecr') {
