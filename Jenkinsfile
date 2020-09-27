@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build docker image') {
             steps {
-              sh 'docker build . -t 469744164476.dkr.ecr.us-east-1.amazonaws.com/test:$BUILD_NUMBER'
+              sh 'sudo docker build . -t 469744164476.dkr.ecr.us-east-1.amazonaws.com/test:$BUILD_NUMBER'
               sh 'ls'
             }
         }
