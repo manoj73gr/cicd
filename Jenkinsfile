@@ -28,6 +28,7 @@ pipeline {
        stage('Kubernetes integration with jenkins ') {
             steps {
               sh 'kubectl get nodes'
+              sh 'helm ls'
             }
         }
        stage('Deploy to kubernetes ') {
