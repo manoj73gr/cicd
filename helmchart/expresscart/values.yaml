@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: 469744164476.dkr.ecr.us-east-1.amazonaws.com/node
-  tag: v2
+  repository: 469744164476.dkr.ecr.us-east-1.amazonaws.com/test
+  tag: $BUILD_NUMBER
   pullPolicy: IfNotPresent
 
 env:
